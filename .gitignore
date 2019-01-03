@@ -2,6 +2,7 @@
 .gradle
 /local.properties
 /food_doc
+/doc
 /.idea
 /.idea/caches/build_file_checksums.ser
 /.idea/libraries
