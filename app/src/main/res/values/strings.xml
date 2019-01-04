@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">DeliciousApp</string>
+    <string name="app_name">NewsApp</string>
+    <string name="title_saved">Saved</string>
+    <string name="title_weather">Weather</string>
+    <string name="title_home">Home</string>
+    <string name="save">Save</string>
+    <string name="title_news">News</string>
+    <string name="name">Name</string>
+    <string name="load">Load</string>
+    <string name="surname">Surname</string>
+    <string name="email">Email</string>
+    <string name="signin">Sign In</string>
+    <string name="google">Google</string>
+    <string name="empty_list">Empty List</string>
+    <string name="password">Password</string>
 </resources>
