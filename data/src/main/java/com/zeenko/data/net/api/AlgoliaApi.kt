@@ -1,7 +1,5 @@
-package com.chisw.data.net.api
+package com.zeenko.data.net.api
 
-import com.chisw.data.net.model.story.Data
-import com.chisw.data.net.model.user.User
 import io.reactivex.Single
 import okhttp3.ResponseBody
 import retrofit2.http.GET
