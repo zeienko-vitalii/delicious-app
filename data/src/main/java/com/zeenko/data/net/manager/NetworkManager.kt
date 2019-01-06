@@ -1,8 +1,8 @@
-package com.chisw.data.net.manager
+package com.zeenko.data.net.manager
 
-import com.chisw.data.BuildConfig
-import com.chisw.data.net.api.AlgoliaApi
 import com.google.gson.GsonBuilder
+import com.zeenko.data.BuildConfig
+import com.zeenko.data.net.api.AlgoliaApi
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.logging.HttpLoggingInterceptor

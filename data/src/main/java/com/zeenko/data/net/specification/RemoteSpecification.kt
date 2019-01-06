@@ -1,6 +1,6 @@
-package com.chisw.data.net.specification
+package com.zeenko.data.net.specification
 
-import com.chisw.domain.abstraction.specification.Specification
+import com.example.domain.abstractions.specification.Specification
 
 interface RemoteSpecification : Specification {
     fun getParameters(): Array<String>?

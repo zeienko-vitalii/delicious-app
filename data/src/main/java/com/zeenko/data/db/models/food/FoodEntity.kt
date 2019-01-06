@@ -1,8 +1,9 @@
-package com.example.domain.models.food
+package com.zeenko.data.db.models.food
 
+import com.example.domain.models.food.Ingredient
 import com.example.domain.models.user.User
 
-data class Food(
+data class FoodEntity(
     val id: Long,
     var name: String,
     var photoUrl: String,
