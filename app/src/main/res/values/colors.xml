@@ -7,8 +7,5 @@
     <color name="colorAccent">#00b7ff</color>
     <color name="white">#ffffff</color>
     <color name="transparent_white">#7fffffff</color>
-    <color name="colorPrimary">#008559</color>
-    <color name="colorPrimaryDark">#005723</color>
-    <color name="colorAccent">#ff214a</color>
     <color name="colorBackground">#0efff700</color>
 </resources>
