@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/photo"
+    android:orientation="vertical"
+    android:paddingTop="150dp">
+
+    <EditText
+        android:id="@+id/etName"
+        style="@style/AppTheme.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="15"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:text="@string/name"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/etSurname"
+        style="@style/AppTheme.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="15"
+        android:hint="@string/surname"
+        android:inputType="textPersonName"
+        android:text="@string/surname"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        style="@style/AppTheme.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="15"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:text="@string/email"
+        tools:ignore="Autofill" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/save"
+            style="@style/AppTheme.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/signin" />
+
+        <Button
+            android:id="@+id/load"
+            style="@style/AppTheme.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/google" />
+    </LinearLayout>
+</LinearLayout>

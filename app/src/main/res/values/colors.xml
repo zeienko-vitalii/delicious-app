@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorAccentOpacity">#14007f93</color>
+    <color name="colorPrimary">#2576a6</color>
+    <color name="colorPrimaryDark">#295e7d</color>
+    <color name="colorPrimaryDarkTransparent">#80295e7d</color>
+    <color name="colorAccent">#00b7ff</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent_white">#7fffffff</color>
     <color name="colorPrimary">#008559</color>
     <color name="colorPrimaryDark">#005723</color>
     <color name="colorAccent">#ff214a</color>
