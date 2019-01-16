@@ -1,0 +1,85 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+# For a list of all available actions, check out
+#     https://docs.fastlane.tools/actions
+# For a list of all available plugins, check out
+#     https://docs.fastlane.tools/plugins/available-plugins
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+# This value helps us track success metrics for Fastfiles
+# we automatically generate. Feel free to remove this line
+# once you get things running smoothly!
+generated_fastfile_id "8fc0d647-b292-401a-ab90-87384d5a9742"
+
+desc "Assemble Build"
+lane :assemble_build do 
+  gradle(task: "assembleDebug")
+end
+
+desc "Assemble Test Application"
+lane :assemble_test_application do 
+  gradle(task: "assembleDebugAndroidTest")
+end
+
+desc "Assemble Build and Test Application"
+lane :assemble do 
+  assemble_build
+  assemble_test_application
+end
+
+platform :android do
+  desc "Runs all the tests"
+  lane :test do
+    gradle(task: "test")
+  end
+
+  desc "Submit a new Beta Build to Crashlytics Beta"
+  lane :beta do
+
+  gradle(
+      task: "clean assemble",
+      build_type: "Debug")
+    
+  # build the release variant
+  build_android_app(task: "assembleDebug")
+
+  # upload to Beta by Crashlytics //8f5cb090cdc0403387b42a9ae834a54be9365880
+  crashlytics(
+    api_token: "107ef3f6ef53042437079bf6629abe30dedc286f",
+    build_secret: "ee6b7410295df701bd2c3960507217673aaa0e621c2750eb0c1282df9e260fa7",
+    apk_path: "./app/build/outputs/apk/debug/app-debug.apk",
+    emails: "jackovi123@gmail.com"
+  )
+
+  # slack(
+  #   slack_url: "https://hooks.slack.com/services/IDS"
+  # )
+  end
+
+  desc "Deploy a new version to the Google Play"
+  lane :deploy do
+    gradle(task: "clean assembleRelease")
+    upload_to_play_store
+  end
+end
+
+#desc "Run instrumentation tests"
+#lane :instrumentation_tests do
+#  automated_test_emulator_run(
+#    AVD_setup_path: "fastlane/AVD_setup.json",
+#    AVD_recreate_new: false,
+#    AVD_clean_after: false,
+#    gradle_task: "connectedDebugAndroidTest")
+#end
+
+# desc "Run instrumentation tests in Firebase Test Lab"
+# lane :instrumentation_tests_testlab do
+#   run_tests_firebase_testlab(
+#     project_id: "deliciousapp-21625",
+#     model: "Nexus6P",
+#     version: "28",
+#     delete_firebase_files: true)
+# end

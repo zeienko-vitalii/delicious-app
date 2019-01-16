@@ -1,4 +1,4 @@
-package com.chisw.data.net.mapper
+package com.zeenko.data.net.mapper
 
 interface Mapper<F, T> {
     fun map(from: F): T
