@@ -30,13 +30,7 @@ lane :assemble do
   assemble_test_application
 end
 
-platform :android do
-  desc "Runs all the tests"
-  lane :test do
-    gradle(task: "test")
-  end
-
-  desc "Submit a new Beta Build to Crashlytics Beta"
+desc "Submit a new Beta Build to Crashlytics Beta"
   lane :beta do
 
   gradle(
@@ -53,10 +47,6 @@ platform :android do
     apk_path: "./app/build/outputs/apk/debug/app-debug.apk",
     emails: "jackovi123@gmail.com"
   )
-
-  # slack(
-  #   slack_url: "https://hooks.slack.com/services/IDS"
-  # )
   end
 
   desc "Deploy a new version to the Google Play"
@@ -65,21 +55,3 @@ platform :android do
     upload_to_play_store
   end
 end
-
-#desc "Run instrumentation tests"
-#lane :instrumentation_tests do
-#  automated_test_emulator_run(
-#    AVD_setup_path: "fastlane/AVD_setup.json",
-#    AVD_recreate_new: false,
-#    AVD_clean_after: false,
-#    gradle_task: "connectedDebugAndroidTest")
-#end
-
-# desc "Run instrumentation tests in Firebase Test Lab"
-# lane :instrumentation_tests_testlab do
-#   run_tests_firebase_testlab(
-#     project_id: "deliciousapp-21625",
-#     model: "Nexus6P",
-#     version: "28",
-#     delete_firebase_files: true)
-# end
